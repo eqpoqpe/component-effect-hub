@@ -1,23 +1,25 @@
-<script>
-import AppUtil from './App.util';
-
-export default {
-  name: 'App',
-  components: {},
-  methods: {
-    plusOne() {},
-  },
-  mounted() {},
-  ...AppUtil(),
-};
-</script>
-
 <template>
   <div id="app">
     <h1>Component Effect Hub</h1>
     <p>Copyright (c) 2022 <span class="profile">Vu Coolgifts</span></p>
+    <Status />
   </div>
 </template>
+
+<script>
+import App from './app.util';
+import Status from './component/Status.vue';
+
+export default {
+  name: 'App',
+  components: { Status },
+  methods: {
+    plusOne() {},
+  },
+  mounted() {},
+  ...App(),
+};
+</script>
 
 <style>
 #app {
@@ -26,10 +28,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 #app p {
+  display: -webkit-flexbox;
   color: black;
   font-style: italic;
   font-size: 15px;
@@ -38,5 +40,6 @@ export default {
 .profile {
   background-color: black;
   color: white;
+  padding: 0px 3px 0px 3px;
 }
 </style>
