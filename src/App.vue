@@ -3,18 +3,23 @@
     <h1>Component Effect Hub</h1>
     <p>Copyright (c) 2022 <span class="profile">Vu Coolgifts</span></p>
     <Status />
+    <Title title="status" />
   </div>
 </template>
 
 <script>
 import App from './app.util';
 import Status from './component/Status.vue';
+import Title from './component/Title.vue';
 
 export default {
   name: 'App',
-  components: { Status },
+  components: { Status, Title },
   methods: {
     plusOne() {},
+    Show(s) {
+      console.log('DONE', s);
+    },
   },
   mounted() {},
   ...App(),
@@ -22,6 +27,17 @@ export default {
 </script>
 
 <style>
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,5 +57,6 @@ export default {
   background-color: black;
   color: white;
   padding: 0px 3px 0px 3px;
+  opacity: 0.75;
 }
 </style>
