@@ -1,3 +1,4 @@
-# vue-kyte58
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vue-kyte58)
+# Component Effect Hub
+<p align="center">
+  <img src="componenteffecthub.jpg" alt="componenteffecthub" width="800px"/>
+</p>
