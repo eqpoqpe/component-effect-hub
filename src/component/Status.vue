@@ -1,58 +1,66 @@
 <template>
-  <div class="wave"></div>
+  <div class="wave-running" ref="wave"></div>
 </template>
 
 <script>
 export default {
   name: 'Status',
+  mounted() {},
 };
 </script>
 
 <style scoped>
-.wave {
+.wave-running {
+  background: transparent;
   position: relative;
-  /* align-items: center; */
+  align-items: center;
   width: 100%;
   height: 337px;
-  background-color: black;
 }
 
-.wave::before,
-.wave::after {
+.wave-running::before,
+.wave-running::after {
+  background: linear-gradient(#e66465, #9198e5);
   content: '';
   position: absolute;
   left: 50%;
   min-width: 300px;
   min-height: 300px;
-  background-color: pink;
-  animation-name: rotate;
+  animation-name: rotate-mix;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  animation-play-state: running;
 }
 
-.wave::before {
-  bottom: 15px;
-  border-radius: 43%;
-  animation-duration: 10s;
-}
-
-.wave::after {
-  background-color: red;
+.wave-running::before {
   bottom: 10px;
-  opacity: 0;
+  opacity: 0.6;
+  border-radius: 44%;
+  animation-duration: 6s;
+}
+
+.wave-running::after {
+  bottom: 13px;
+  opacity: 0.6;
   border-radius: 47%;
   animation-duration: 10s;
 }
 
-@keyframes rotate {
+@keyframes rotate-mix {
   0% {
-    transform: translate(-50%, 0) rotateZ(0deg);
+    transform: scale(1) translate(-50%, 0) rotateZ(0deg);
+  }
+  25% {
+    transform: scale(0.95) translate(-55%, 0) rotateZ(90deg);
   }
   50% {
-    transform: translate(-50%, -2%) rotateZ(180deg);
+    transform: scale(0.9) translate(-56%, 0%) rotateZ(180deg);
+  }
+  75% {
+    transform: scale(0.95) translate(-55%, 0) rotateZ(270deg);
   }
   100% {
-    transform: translate(-50%, 0%) rotateZ(360deg);
+    transform: scale(1) translate(-50%, 0%) rotateZ(360deg);
   }
 }
 </style>
