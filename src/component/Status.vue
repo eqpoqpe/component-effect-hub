@@ -88,13 +88,13 @@ export default {
     transform: scale(1) translate(-50%, 0) rotateZ(0deg);
   }
   25% {
-    transform: scale(0.95) translate(-52%, 0) rotateZ(90deg);
+    transform: scale(0.95) translate(-52%, 1%) rotateZ(90deg);
   }
   50% {
-    transform: scale(0.9) translate(-55%, 0%) rotateZ(180deg);
+    transform: scale(0.9) translate(-55%, 3%) rotateZ(180deg);
   }
   75% {
-    transform: scale(0.95) translate(-52%, 0) rotateZ(270deg);
+    transform: scale(0.95) translate(-52%, 1%) rotateZ(270deg);
   }
   100% {
     transform: scale(1) translate(-50%, 0%) rotateZ(360deg);
