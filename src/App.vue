@@ -3,18 +3,17 @@
     <h1>Component Effect Hub</h1>
     <p>Copyright (c) 2022 <span class="profile">Vu Coolgifts</span></p>
     <Status />
-    <Title title="status" />
   </div>
 </template>
 
 <script>
 import App from './app.util';
 import Status from './component/Status.vue';
-import Title from './component/Title.vue';
+import Glass from './component/Glass.vue';
 
 export default {
   name: 'App',
-  components: { Status, Title },
+  components: { Status },
   methods: {
     plusOne() {},
     Show(s) {
