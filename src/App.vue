@@ -3,17 +3,18 @@
     <h1>Component Effect Hub</h1>
     <p>Copyright (c) 2022 <span class="profile">Vu Coolgifts</span></p>
     <Status />
+    <Move />
   </div>
 </template>
 
 <script>
 import App from './app.util';
 import Status from './component/Status.vue';
-import Glass from './component/Glass.vue';
+import Move from './component/Move.vue';
 
 export default {
   name: 'App',
-  components: { Status },
+  components: { Status, Move },
   methods: {
     plusOne() {},
     Show(s) {
